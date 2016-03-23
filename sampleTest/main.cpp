@@ -249,6 +249,13 @@ TEST_F(SampleTest, SEHexception)
 	std::this_thread::sleep_for(std::chrono::milliseconds(100));
 }
 
+TEST_F(SampleTest, exception)
+{
+	throw std::bad_alloc();
+
+	std::this_thread::sleep_for(std::chrono::milliseconds(100));
+}
+
 int main(int argc, char* argv[])
 {
 	::testing::InitGoogleTest(&argc, argv);
