@@ -20,6 +20,20 @@ namespace {
 bool less_than(int a, int b) { return a < b; }
 bool negative(int a) { return a < 0; }
 
+TEST_F(SampleTest, DISABLED_test)
+{
+	EXPECT_TRUE(true);
+
+	std::this_thread::sleep_for(std::chrono::milliseconds(100));
+}
+
+TEST_F(SampleTest, passingTest)
+{
+	EXPECT_TRUE(true);
+
+	std::this_thread::sleep_for(std::chrono::milliseconds(100));
+}
+
 TEST_F(SampleTest, expectTrue)
 {
 	bool test = false;
