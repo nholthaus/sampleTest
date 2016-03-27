@@ -255,6 +255,7 @@ TEST_F(SampleTest, expectPred2)
 std::this_thread::sleep_for(std::chrono::milliseconds(100));
 }
 
+#ifndef __GNUC__
 TEST_F(SampleTest, SEHexception)
 {
 	int* value = nullptr;
@@ -262,6 +263,7 @@ TEST_F(SampleTest, SEHexception)
 
 	std::this_thread::sleep_for(std::chrono::milliseconds(100));
 }
+#endif
 
 TEST_F(SampleTest, exception)
 {
